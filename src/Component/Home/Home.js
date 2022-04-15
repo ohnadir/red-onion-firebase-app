@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import banner from '../../images/bannerbackground.png'
+import Breakfasts from '../Food/Breakfast/Breakfasts';
 import Dinners from '../Food/Dinners/Dinners';
+import Lunchs from '../Food/Lunch/Lunchs';
 const Home = () => {
     return (
         <div>
@@ -17,14 +19,109 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className='my-8 flex gap-10 justify-center'>
-                <Link to='/breakfast'>Breakfast</Link>
-                <Link to='/lunch'>Lunch</Link>
-                <Link to='/dinner'>Dinner</Link>
-            </div>
-            <div>
+            <div className=''>
                 <div>
-                    <Dinners></Dinners>
+                <ul
+                    class="my-10 nav nav-pills flex flex-col md:flex-row flex-wrap list-none pl-0 mb-4 justify-center"
+                    id="pills-tab3"
+                    role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button type="button" class="
+                                nav-link
+                                block
+                                font-medium
+                                text-xs
+                                leading-tight
+                                uppercase
+                                rounded
+                                w-full
+                                md:w-auto
+                                px-6
+                                py-3
+                                my-2
+                                md:mr-2
+                                focus:outline-none focus:ring-0
+                                active"
+                                id="pills-home-tab3"
+                                data-bs-toggle="pill"
+                                data-bs-target="#pills-home3"
+                                role="tab"
+                                aria-controls="pills-home3"
+                                aria-selected="true">Breakfast
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button type="button" class="
+                                nav-link
+                                block
+                                font-medium
+                                text-xs
+                                leading-tight
+                                uppercase
+                                rounded
+                                w-full
+                                md:w-auto
+                                px-6
+                                py-3
+                                my-2
+                                md:mx-2
+                                focus:outline-none focus:ring-0"
+                                id="pills-profile-tab3"
+                                data-bs-toggle="pill"
+                                data-bs-target="#pills-profile3"
+                                role="tab"
+                                aria-controls="pills-profile3"
+                                aria-selected="false">Lunch
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button type="button" class="
+                                nav-link
+                                block
+                                font-medium
+                                text-xs
+                                leading-tight
+                                uppercase
+                                rounded
+                                w-full
+                                md:w-auto
+                                px-6
+                                py-3
+                                my-2
+                                md:ml-2
+                                focus:outline-none focus:ring-0"
+                                id="pills-contact-tab3"
+                                data-bs-toggle="pill"
+                                data-bs-target="#pills-contact3"
+                                role="tab"
+                                aria-controls="pills-contact3"
+                                aria-selected="false">Dinner
+                            </button>
+                        </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent3">
+                    <div
+                        class="tab-pane fade show active"
+                        id="pills-home3"
+                        role="tabpanel"
+                        aria-labelledby="pills-home-tab3">
+                            <Breakfasts></Breakfasts>
+                    </div>
+                    <div
+                        class="tab-pane fade"
+                        id="pills-profile3"
+                        role="tabpanel"
+                        aria-labelledby="pills-profile-tab3">
+                            <Lunchs></Lunchs>
+                    </div>
+                    <div
+                        class="tab-pane fade"
+                        id="pills-contact3"
+                        role="tabpanel"
+                        aria-labelledby="pills-contact-tab3">
+                            <Dinners></Dinners>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
