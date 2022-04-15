@@ -16,7 +16,7 @@ const Login = () => {
                         <input className='w-full bg-zinc-100 p-2 outline-none' type="password" placeholder='Password' />
                     </div>
                     <button className='bg-red-500 text-white w-full py-2 rounded'>Log in</button>
-                    <p className='mt-2 text-sm  text-center'>Create an account ? <Link className='text-red-500' to='/login'>Sign in</Link></p>
+                    <p className='mt-2 text-sm  text-center'>Create an account ? <Link className='text-red-500' to='/signup'>Sign in</Link></p>
                 </form>
             </div>
         </div>
